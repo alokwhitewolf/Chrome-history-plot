@@ -1,6 +1,7 @@
 import sqlite3
 import os
-
+import operator
+from collections import OrderedDict
 
 
 
@@ -36,3 +37,5 @@ for url, count in results:
 		sites_count[url] += 1
 	else:
 		sites_count[url] = 1
+
+sites_count_sorted = OrderedDict(sorted(sites_count.items(), key=operator.itemgetter(1), reverse=True))
