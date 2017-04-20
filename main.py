@@ -50,3 +50,6 @@ for key, value in OrderedDict.iteritems():
 	count.append(value)
 	LABELS.append(key)
 
+plt.bar(index, count, align='center')
+plt.xticks(index, LABELS)
+plt.show()
