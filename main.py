@@ -29,3 +29,10 @@ cursor.execute(select_statement)
 results = cursor.fetchall() #tuple
 
 sites_count = {} #dict
+
+for url, count in results:
+	url = parse(url)
+	if url in sites_count:
+		sites_count[url] += 1
+	else:
+		sites_count[url] = 1
