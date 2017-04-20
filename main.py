@@ -2,7 +2,7 @@ import sqlite3
 import os
 import operator
 from collections import OrderedDict
-
+import pylab as plt
 
 
 def parse(url):
@@ -39,3 +39,14 @@ for url, count in results:
 		sites_count[url] = 1
 
 sites_count_sorted = OrderedDict(sorted(sites_count.items(), key=operator.itemgetter(1), reverse=True))
+
+index = [1,2,3, 4, 5, 6, 7, 8, 9, 10]
+
+count = []
+
+LABELS = []
+for key, value in OrderedDict.iteritems():
+
+	count.append(value)
+	LABELS.append(key)
+
