@@ -42,13 +42,10 @@ sites_count_sorted = OrderedDict(sorted(sites_count.items(), key=operator.itemge
 
 index = [1,2,3, 4, 5, 6, 7, 8, 9, 10]
 
-count = []
+count = list(sites_count_sorted.values())[:10]
 
-LABELS = []
-for key, value in OrderedDict.iteritems():
+LABELS = list(sites_count_sorted.items())[:10]
 
-	count.append(value)
-	LABELS.append(key)
 
 plt.bar(index, count, align='center')
 plt.xticks(index, LABELS)
