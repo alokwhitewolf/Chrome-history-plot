@@ -3,7 +3,7 @@ import os
 import operator
 from collections import OrderedDict
 import pylab as plt
-import matplotlib.pyplot as pl
+#import matplotlib.pyplot as pl
 
 def parse(url):
 	try:
